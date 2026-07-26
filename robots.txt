@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://annanikamedia.ru/sitemap.xml
