@@ -492,6 +492,13 @@ section{position:relative;z-index:1}
 .podcast-about-img{position:relative}
 .podcast-about-img img{width:100%;border-radius:4px;display:block;object-fit:cover;max-height:580px}
 .podcast-about-img::after{content:'';position:absolute;inset:-12px -12px auto auto;width:60%;height:60%;border-top:2px solid var(--rose);border-right:2px solid var(--rose);border-radius:0 4px 0 0;pointer-events:none}
+.podcast-video{position:relative;cursor:pointer}
+.podcast-video video{width:100%;border-radius:4px;display:block;object-fit:cover;max-height:580px;background:#000}
+.podcast-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.podcast-play-btn::before{content:'';position:absolute;inset:0;background:rgba(26,20,32,.15);border-radius:4px}
+.podcast-play-circle{position:relative;width:64px;height:64px;border-radius:50%;background:var(--rose-d);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .2s,background .2s}
+.podcast-video:hover .podcast-play-circle{background:var(--rose);transform:scale(1.06)}
+.podcast-video.playing .podcast-play-btn{display:none}
 .podcast-roles{list-style:none;padding:0;margin:24px 0 32px;display:flex;flex-direction:column;gap:10px}
 .podcast-roles li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--muted);line-height:1.5;font-weight:300}
 .podcast-roles li::before{content:'—';color:var(--rose);flex-shrink:0;font-weight:400}
@@ -1425,7 +1432,12 @@ footer{background:var(--charcoal);padding:40px 48px;
   <div class="si">
     <div class="podcast-about-inner">
       <div class="podcast-about-img reveal-l">
-        <img src="img/img-27-ab7c28ee0c.png" alt="Анна Ника Гулева в студии подкаста">
+        <div class="podcast-video" id="podcastVideoWrap" onclick="playPodcastVideo(this)">
+          <video id="podcastVideo" poster="img/img-27-ab7c28ee0c.png" playsinline preload="none">
+            <source src="video/podcast-teaser.mp4" type="video/mp4">
+          </video>
+          <div class="podcast-play-btn"><div class="podcast-play-circle"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M8 5v14l11-7z" fill="white"/></svg></div></div>
+        </div>
       </div>
       <div class="podcast-about-text">
         <div class="eyebrow reveal">Подкаст</div>
@@ -1883,6 +1895,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 if(window.location.search.includes('thanks=1')){
   document.getElementById('thanks-banner').style.display='block';
   setTimeout(()=>{document.getElementById('thanks-banner').style.display='none'},8000);
+}
+</script>
+<script>
+function playPodcastVideo(wrap){
+  var v=document.getElementById('podcastVideo');
+  v.setAttribute('controls','');
+  v.play();
+  wrap.classList.add('playing');
+  wrap.onclick=null;
 }
 </script>
 </body>
