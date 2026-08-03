@@ -1195,7 +1195,7 @@ footer{background:var(--charcoal);padding:40px 48px;
         <p class="section-sub reveal">Заполните анкету — я свяжусь с вами лично в ближайшее время.</p>
       </div>
       <div class="form-right reveal">
-        <form action="https://formsubmit.co/a.guleva@yandex.ru" method="POST">
+        <form action="https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact" method="POST">
           <input type="hidden" name="_next" value="https://annanikamedia.ru/?thanks=1">
           <input type="hidden" name="_subject" value="Новая заявка — Анна Ника Гулева">
           <input type="hidden" name="_captcha" value="false">
@@ -1361,7 +1361,7 @@ footer{background:var(--charcoal);padding:40px 48px;
           <p class="section-sub reveal">Выступаю на темы медиа, личного бренда, GEO и искусственного интеллекта. Заполните анкету — и я вернусь с ответом в ближайшее время.</p>
         </div>
         <div class="form-right reveal">
-          <form action="https://formsubmit.co/a.guleva@yandex.ru" method="POST">
+          <form action="https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact" method="POST">
             <input type="hidden" name="_next" value="https://annanikamedia.ru/?thanks=1">
             <input type="hidden" name="_subject" value="Приглашение спикером — Анна Ника Гулева">
             <input type="hidden" name="_captcha" value="false">
@@ -1473,7 +1473,7 @@ footer{background:var(--charcoal);padding:40px 48px;
           </ul>
         </div>
         <div class="form-right reveal">
-          <form action="https://formsubmit.co/a.guleva@yandex.ru" method="POST">
+          <form action="https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact" method="POST">
             <input type="hidden" name="_next" value="https://annanikamedia.ru/?thanks=1">
             <input type="hidden" name="_subject" value="Заявка на подкаст — Медийная личность">
             <input type="hidden" name="_captcha" value="false">
@@ -1863,7 +1863,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     form.querySelector('button').disabled = true;
 
     try {
-      await fetch('https://formsubmit.co/ajax/a.guleva@yandex.ru', {
+      await fetch('https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
