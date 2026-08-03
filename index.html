@@ -586,6 +586,20 @@ section{position:relative;z-index:1}
 .press-card-link svg{width:14px;height:14px;transition:transform .25s}
 .press-card:hover .press-card-link{gap:12px}
 .press-card:hover .press-card-link svg{transform:translateX(4px)}
+.interviews-section{padding:120px 0;background:var(--charcoal-l)}
+.interviews-section .eyebrow{color:var(--rose-l)}
+.interviews-section .eyebrow::before{background:var(--rose-l)}
+.interviews-section .section-title{color:#fff}
+.interviews-section .section-title em{color:var(--rose-l)}
+.interviews-list{margin-top:56px;display:flex;flex-direction:column;max-width:780px}
+.interview-item{display:flex;align-items:center;gap:20px;padding:20px 4px;
+  border-bottom:1px solid rgba(255,255,255,.1);color:#fff;text-decoration:none;
+  transition:opacity .2s,gap .25s}
+.interview-item:first-child{border-top:1px solid rgba(255,255,255,.1)}
+.interview-item:hover{opacity:.7;gap:26px}
+.interview-item-n{font-family:'Cormorant Garamond',serif;font-size:15px;color:rgba(255,255,255,.35);flex-shrink:0}
+.interview-item-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;flex:1;line-height:1.4}
+.interview-item svg{width:16px;height:16px;flex-shrink:0;color:var(--rose-l)}
 @media(max-width:960px){.press-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.press-grid{grid-template-columns:1fr}}
 
@@ -1313,6 +1327,82 @@ footer{background:var(--charcoal);padding:40px 48px;
     <p class="press-card-excerpt">Пять ключевых ошибок при работе с медиа — и рекомендации, как их избежать.</p>
     <span class="press-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
   </a>
+    </div>
+  </div>
+</section>
+
+<!-- 10а. ИНТЕРВЬЮ КЛИЕНТОВ В СМИ -->
+<section id="client-interviews" class="interviews-section">
+  <div class="si">
+    <div class="eyebrow reveal">Истории клиентов</div>
+    <h2 class="section-title reveal">Интервью моих<br><em>клиентов в СМИ</em></h2>
+    <div class="interviews-list">
+      <a href="https://snob.ru/profile/416183/blog/3107558/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">01</span><span class="interview-item-title">Как управлять бизнесом, собой и температурой в доме?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3110700" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">02</span><span class="interview-item-title">Ошибки — это просто другие двери</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3114342/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">03</span><span class="interview-item-title">Психология власти: почему сильные руководители теряют влияние</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3107249/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">04</span><span class="interview-item-title">Как предпринимателю вырастить бизнес без разрушения себя?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3114826/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">05</span><span class="interview-item-title">Этот год для тех, у кого внутри бетон</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3117422/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">06</span><span class="interview-item-title">Искусственный интеллект в кино: коллега, инструмент или соперник?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3112330/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">07</span><span class="interview-item-title">Как сохранить ментальное здоровье в эпоху неопределённости?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3110998/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">08</span><span class="interview-item-title">Я гнался за деньгами, чтобы купить любовь</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3107049/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">09</span><span class="interview-item-title">Жизнь с «вау-эффектом»</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://snob.ru/profile/416183/blog/3106236/" target="_blank" rel="noopener" class="interview-item reveal"><span class="interview-item-n">10</span><span class="interview-item-title">Без фильтров и постановки: как выглядит женское инклюзивное медиа сегодня</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 10б. ФОРМА: СТАТЬ ГЕРОЕМ ИНТЕРВЬЮ -->
+<section class="form-section">
+  <div class="si">
+    <div class="form-inner">
+      <div class="form-left">
+        <div class="eyebrow reveal">Ваша история в СМИ</div>
+        <h2 class="section-title reveal">Стать героем<br><em>интервью в СМИ</em></h2>
+        <p class="section-sub reveal">Если вы клиент, эксперт или предприниматель с историей, которая может вдохновить — расскажите о себе. Помогу превратить её в публикацию в федеральных изданиях.</p>
+      </div>
+      <div class="form-right reveal">
+        <form action="https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact" method="POST">
+          <input type="hidden" name="_next" value="https://annanikamedia.ru/?thanks=1">
+          <input type="hidden" name="_subject" value="Заявка — стать героем интервью в СМИ">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+          <div class="f-row">
+            <div class="f-group">
+              <label>Имя *</label>
+              <input type="text" name="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="f-group">
+              <label>Фамилия *</label>
+              <input type="text" name="surname" placeholder="Ваша фамилия" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label>Телефон *</label>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="f-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="anna@mail.ru" required>
+            </div>
+          </div>
+          <div class="f-group">
+            <label>Чем занимаетесь?</label>
+            <input type="text" name="occupation" placeholder="Профессия, бизнес или проект">
+          </div>
+          <div class="f-group">
+            <label>О чём ваша история?</label>
+            <textarea name="topic" placeholder="Расскажите кратко: что произошло, какой опыт хотите передать читателям?"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            Рассказать свою историю <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <div class="form-consent">
+            <input type="checkbox" id="consent-interview" name="consent" required>
+            <label>Я согласен(а) с <a href="privacy.html" target="_blank">политикой конфиденциальности</a> и <a href="oferta.html" target="_blank">договором оферты</a></label>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
