@@ -612,14 +612,15 @@ section{position:relative;z-index:1}
 .tg-cta-sub{font-size:13px;color:var(--muted);margin-top:4px;letter-spacing:.3px}
 .tg-cta-buttons{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
 .tg-books{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.btn-book{display:inline-flex;align-items:center;gap:9px;
-  background:var(--charcoal-l);border:1px solid transparent;color:#fff;
-  padding:11px 20px;border-radius:4px;font-size:12px;font-weight:500;
-  text-decoration:none;transition:all .25s;letter-spacing:.3px;white-space:nowrap}
-.btn-book svg{width:15px;height:15px;color:rgba(255,255,255,.7);flex-shrink:0}
-.btn-book:hover{background:var(--rose-d);color:#fff}
-.tg-books-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--muted);text-align:right;margin-bottom:2px}
+.btn-book{display:inline-flex;align-items:center;gap:11px;
+  background:linear-gradient(135deg,var(--rose-d),var(--rose));border:1px solid transparent;color:#fff;
+  padding:16px 30px;border-radius:4px;font-size:15px;font-weight:700;
+  text-decoration:none;transition:all .25s;letter-spacing:.3px;white-space:nowrap;
+  box-shadow:0 4px 16px rgba(168,80,104,.25)}
+.btn-book svg{width:19px;height:19px;color:#fff;flex-shrink:0}
+.btn-book:hover{background:linear-gradient(135deg,var(--rose),var(--rose-l));transform:translateY(-2px);box-shadow:0 6px 22px rgba(168,80,104,.35)}
+.tg-books-label{font-size:17px;font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.3px;text-transform:none;
+  color:var(--rose-d);text-align:right;margin-bottom:8px}
 @media(max-width:768px){.tg-cta-buttons{align-items:flex-start}.tg-books{justify-content:flex-start}.tg-books-label{text-align:left}}
 
 /* ── SPEAKER ABOUT ── */
