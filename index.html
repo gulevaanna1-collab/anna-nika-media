@@ -383,6 +383,12 @@ section{position:relative;z-index:1}
 .dir-card li{font-size:14px;color:var(--muted);display:flex;gap:8px;
   line-height:1.5;font-weight:300;transition:color .35s}
 .dir-card li::before{content:'—';color:var(--rose);flex-shrink:0;font-size:11px;transition:color .35s}
+.dir-cta-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+  background:linear-gradient(135deg,var(--rose-d),var(--rose));color:#fff !important;
+  padding:12px 22px;border-radius:100px;font-size:13.5px;font-weight:700;
+  text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(168,80,104,.3);
+  transition:all .25s}
+.dir-cta-btn:hover{background:linear-gradient(135deg,var(--rose),var(--rose-l));transform:translateY(-2px);box-shadow:0 6px 20px rgba(168,80,104,.4)}
 .dir-result{margin-top:24px;padding-top:20px;border-top:1px solid rgba(168,80,104,.15);transition:border-color .35s}
 .dir-result-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:500;transition:color .35s}
 .dir-result-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:600;color:var(--charcoal);line-height:1.5;transition:color .35s}
@@ -953,9 +959,9 @@ footer{background:var(--charcoal);padding:40px 48px;
         <div class="dir-title">Искусственный интеллект</div>
         <ul>
           <li>Персональные AI-ассистенты</li>
-          <li><a href="https://aikodkomandy.ru" target="_blank" style="color:inherit">Интенсив «ИИ: КОД КОМАНДЫ»</a></li>
           <li>Автоматизация работы</li>
         </ul>
+        <a href="https://aikodkomandy.ru" target="_blank" rel="noopener" class="dir-cta-btn">Интенсив «ИИ: Код команды» →</a>
         <div class="dir-result">
           <div class="dir-result-label">Итого</div>
           <div class="dir-result-text">Вы работаете в 3–5 раз быстрее. Рутина автоматизирована, команда усилена ИИ-ассистентами.</div>
