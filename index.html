@@ -566,6 +566,14 @@ section{position:relative;z-index:1}
 .btn-submit svg{width:16px;height:16px;transition:transform .3s}
 .btn-submit:hover{background:var(--rose-d)}
 .btn-submit:hover svg{transform:translateX(4px)}
+.km-cta-btn{background:linear-gradient(100deg,var(--rose-d) 0%,var(--rose) 22%,var(--rose-l) 42%,var(--rose) 62%,var(--rose-d) 82%,var(--rose) 100%) !important;
+  background-size:220% 100%;animation:roseSheen 5s linear infinite;
+  position:relative;overflow:hidden}
+.km-cta-btn::after{content:'';position:absolute;top:0;left:-75%;width:35%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%);
+  transform:skewX(-18deg);animation:roseShine 3.2s ease-in-out infinite;pointer-events:none}
+.km-cta-btn svg{position:relative}
+.km-cta-btn:hover{background:linear-gradient(100deg,var(--rose) 0%,var(--rose-l) 22%,var(--rose) 42%,var(--rose-l) 62%,var(--rose) 82%,var(--rose-l) 100%) !important;filter:brightness(1.05)}
 .form-note{font-size:11px;color:rgba(26,20,32,.3);text-align:center;margin-top:12px;line-height:1.5}
 .form-consent{display:flex;align-items:flex-start;gap:10px;margin-top:16px;margin-bottom:4px}
 .form-consent input[type=checkbox]{width:16px;height:16px;min-width:16px;margin-top:2px;accent-color:var(--rose);cursor:pointer}
@@ -1052,7 +1060,7 @@ footer{background:var(--charcoal);padding:40px 48px;
           </div>
           <div class="km-footer">
             <div class="km-meta">Срок: <strong>1 месяц</strong> &nbsp;·&nbsp; Стоимость: <strong>от 150 000 ₽</strong></div>
-            <a href="#form" onclick="this.closest('.km-card').classList.remove('open')" class="btn-submit" style="width:auto;padding:14px 32px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
+            <a href="#form" onclick="this.closest('.km-card').classList.remove('open')" class="btn-submit km-cta-btn" style="width:auto;padding:14px 32px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
               Записаться на встречу <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
