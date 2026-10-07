@@ -270,8 +270,12 @@ nav.scrolled{background:rgba(250,247,244,.94);backdrop-filter:blur(20px);
 .btn-primary{display:inline-flex;align-items:center;gap:12px;
   background:var(--charcoal);color:#fff;padding:16px 32px;
   border-radius:4px;font-size:13px;font-weight:500;letter-spacing:.5px;
-  text-decoration:none;transition:all .3s;border:none;cursor:pointer}
-.btn-primary .ico{width:16px;height:16px;transition:transform .3s}
+  text-decoration:none;transition:all .3s;border:none;cursor:pointer;
+  position:relative;overflow:hidden}
+.btn-primary::after{content:'';position:absolute;top:0;left:-75%;width:35%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.35) 50%,transparent 100%);
+  transform:skewX(-18deg);animation:roseShine 3.2s ease-in-out infinite;pointer-events:none}
+.btn-primary .ico{width:16px;height:16px;transition:transform .3s;position:relative}
 .btn-primary:hover{background:var(--rose-d)}
 .btn-primary:hover .ico{transform:translateX(4px)}
 .hero-note{font-size:11px;color:var(--muted);letter-spacing:.5px}
@@ -383,12 +387,19 @@ section{position:relative;z-index:1}
 .dir-card li{font-size:14px;color:var(--muted);display:flex;gap:8px;
   line-height:1.5;font-weight:300;transition:color .35s}
 .dir-card li::before{content:'—';color:var(--rose);flex-shrink:0;font-size:11px;transition:color .35s}
+@keyframes roseSheen{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes roseShine{0%{left:-75%}55%{left:130%}100%{left:130%}}
 .dir-cta-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;
-  background:linear-gradient(135deg,var(--rose-d),var(--rose));color:#fff !important;
+  background:linear-gradient(100deg,var(--rose-d) 0%,var(--rose) 22%,var(--rose-l) 42%,var(--rose) 62%,var(--rose-d) 82%,var(--rose) 100%);
+  background-size:220% 100%;animation:roseSheen 5s linear infinite;
+  position:relative;overflow:hidden;color:#fff !important;
   padding:12px 22px;border-radius:100px;font-size:13.5px;font-weight:700;
   text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(168,80,104,.3);
-  transition:all .25s}
-.dir-cta-btn:hover{background:linear-gradient(135deg,var(--rose),var(--rose-l));transform:translateY(-2px);box-shadow:0 6px 20px rgba(168,80,104,.4)}
+  transition:transform .25s,box-shadow .25s}
+.dir-cta-btn::after{content:'';position:absolute;top:0;left:-75%;width:35%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%);
+  transform:skewX(-18deg);animation:roseShine 3.2s ease-in-out infinite;pointer-events:none}
+.dir-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(168,80,104,.4);filter:brightness(1.08)}
 .dir-result{margin-top:24px;padding-top:20px;border-top:1px solid rgba(168,80,104,.15);transition:border-color .35s}
 .dir-result-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:500;transition:color .35s}
 .dir-result-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:600;color:var(--charcoal);line-height:1.5;transition:color .35s}
@@ -619,12 +630,17 @@ section{position:relative;z-index:1}
 .tg-cta-buttons{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
 .tg-books{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 .btn-book{display:inline-flex;align-items:center;gap:11px;
-  background:linear-gradient(135deg,var(--rose-d),var(--rose));border:1px solid transparent;color:#fff;
+  background:linear-gradient(100deg,var(--rose-d) 0%,var(--rose) 22%,var(--rose-l) 42%,var(--rose) 62%,var(--rose-d) 82%,var(--rose) 100%);
+  background-size:220% 100%;animation:roseSheen 5s linear infinite;
+  position:relative;overflow:hidden;border:1px solid transparent;color:#fff;
   padding:16px 30px;border-radius:4px;font-size:15px;font-weight:700;
-  text-decoration:none;transition:all .25s;letter-spacing:.3px;white-space:nowrap;
+  text-decoration:none;transition:transform .25s,box-shadow .25s;letter-spacing:.3px;white-space:nowrap;
   box-shadow:0 4px 16px rgba(168,80,104,.25)}
-.btn-book svg{width:19px;height:19px;color:#fff;flex-shrink:0}
-.btn-book:hover{background:linear-gradient(135deg,var(--rose),var(--rose-l));transform:translateY(-2px);box-shadow:0 6px 22px rgba(168,80,104,.35)}
+.btn-book::after{content:'';position:absolute;top:0;left:-75%;width:35%;height:100%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.75) 50%,transparent 100%);
+  transform:skewX(-18deg);animation:roseShine 3.2s ease-in-out infinite;pointer-events:none}
+.btn-book svg{width:19px;height:19px;color:#fff;flex-shrink:0;position:relative}
+.btn-book:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(168,80,104,.35);filter:brightness(1.08)}
 .tg-books-label{font-size:30px;font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.3px;text-transform:none;
   color:var(--rose-d);text-align:right;margin-bottom:14px;line-height:1.15}
 @media(max-width:768px){.tg-cta-buttons{align-items:flex-start}.tg-books{justify-content:flex-start}.tg-books-label{text-align:left}}
@@ -936,6 +952,7 @@ footer{background:var(--charcoal);padding:40px 48px;
           <li>Федеральные СМИ</li>
           <li>Интервью и выступления</li>
         </ul>
+        <a href="https://budbrendom.ru" target="_blank" rel="noopener" class="dir-cta-btn">Интенсив «Медийность и деньги» →</a>
         <div class="dir-result">
           <div class="dir-result-label">Итого</div>
           <div class="dir-result-text">Ваш бренд понятен целевой аудитории. Вы знаете, куда двигаетесь, и уверенно чувствуете себя в любом медиапространстве.</div>
